@@ -1,0 +1,5 @@
+1)Browser sync launch
+browser-sync start --server --directory --files "**/*"
+
+2)Service
+$scope,$filter are all services in angular

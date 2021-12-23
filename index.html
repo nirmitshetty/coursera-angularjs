@@ -1,0 +1,27 @@
+
+
+<html ng-app="firstApp">
+<head>
+<script src="angular.min.js"></script>
+<script src="app.js"></script>
+</head>
+<body>
+<h1>hi</h1>
+
+<h1>helloa</h1>
+<h2>aaa</h2>
+<div ng-controller="firstController">
+<input type="text" ng-model="name" ng-keyup="displayNumeric();" ng-blur="upper()"/>
+
+  {{sayHello()}} {{name}}
+  <br>{{total}}
+
+  <div>
+  <button ng-click="makeHappy()">Make me happy</button>
+  <img ng-src="images/{{imgName}}.jpg"/>  
+
+  </div>
+</div>
+
+</body>
+</html>
