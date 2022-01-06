@@ -20,8 +20,31 @@
   <div>
   <button ng-click="makeHappy()">Make me happy</button>
   <img ng-src="images/{{imgName}}.jpg"/>
-
+  <br>{{msg}}
+  <br>{{cost|currency}}
+  <br>{{cost|currency:"^^^":4}}
   </div>
+  <div>
+    <button ng-click="incrementCounter()">increment</button>
+    Counter: {{counter}}
+  </div>
+
+<h2>shopping list</h2>
+item2<input type="text" ng-model="items[1]"><br>
+search string<input type="text" ng-model="search">
+  <ul>
+    <li ng-repeat="item in items|filter:search">{{item}}</li>
+  </ul>
+</div>
+
+<h2>shopping 2</h2>
+<div ng-controller="ShoppingAddController as addItem">
+<input type="text" ng-model="addItem.name"><button ng-click="addItem.add()">ADD</button>
+</div>
+<div ng-controller="ShoppingShowController as showItem">
+<ul>
+  <li ng-repeat="item in showItem.items">{{item}}<button ng-click="showItem.remove($index)">Remove</button></li>
+</ul>
 </div>
 
 </body>
